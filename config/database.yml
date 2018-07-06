@@ -1,0 +1,35 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+development:
+  adapter: postgresql
+  username: deployer
+  password: <%= ENV['READER_DATABASE_PASSWORD'] %>
+  database: readr_dev
+  host: localhost
+  pool: 10
+  timeout: 5000
+  encoding: utf8
+
+test:
+  adapter: postgresql
+  username: deployer
+  password: <%= ENV['READER_DATABASE_PASSWORD'] %>
+  database: readr_test
+  host: localhost
+  pool: 10
+  timeout: 5000
+  encoding: utf8
+
+production:
+  adapter: postgresql
+  username: deployer
+  password: <%= ENV['READER_DATABASE_PASSWORD'] %>
+  database: readr
+  host: localhost
+  pool: 10
+  timeout: 5000
+  encoding: utf8
