@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.0'
 gem 'pg'
 gem 'rspec-core', '3.7.1'
 gem 'rspec-rails'
-gem 'graphql'
+gem 'webpacker', '~> 3.5'
 gem 'rubocop-rails', '~> 1.4.1'
 gem 'rb-readline'
 gem 'puma', '~> 3.11'
@@ -47,6 +47,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'foreman', '~> 0.82.0'
 end
 
 group :test do
