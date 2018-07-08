@@ -51,7 +51,7 @@ jobs:
             createuser deployer
             sudo psql -U root
             createdb root
-            psql && ALTER USER deployer WITH SUPERUSER && \q
+            sudo postgres psql -p 5432 -c "ALTER USER deployer WITH SUPERUSER"
 
             for i in `seq 1 10`;
             do
