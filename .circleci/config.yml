@@ -46,7 +46,7 @@ jobs:
           name: Database Setup
           command: |
             createuser deployer
-            sudo -u psql -U root
+            sudo psql -U root
             createdb root
             psql && ALTER USER deployer WITH SUPERUSER && \q
             bundle exec rake db:create
