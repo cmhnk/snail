@@ -43,7 +43,7 @@ jobs:
             - vendor/bundle
 
       - run:
-          name: Database Setup
+          name: Waiting for Postgres to be ready
           command: |
             postgres -D /usr/local/pgsql/data >logfile 2>&1 &
             pg_isready
@@ -51,6 +51,18 @@ jobs:
             sudo psql -U root
             createdb root
             psql && ALTER USER deployer WITH SUPERUSER && \q
+
+            for i in `seq 1 10`;
+            do
+              nc -z localhost 5432 && echo Success && exit 0
+              echo -n .
+              sleep 1
+            done
+            echo Failed waiting for Postgres && exit 1
+
+      - run:
+          name: Database Setup
+          command: |
             bundle exec rake db:create
             bundle exec rake db:migrate
             bundle exec rake db:seed
