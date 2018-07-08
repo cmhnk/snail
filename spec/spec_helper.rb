@@ -1,5 +1,9 @@
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'database_cleaner'
+
 # Seeds
-require 'db_seeds_helper'
+require File.expand_path('db_seeds_helper.rb', __dir__)
 
 RESEED_DB = lambda do
   DbSeedsHelper.create_users
