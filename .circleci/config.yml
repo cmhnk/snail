@@ -16,8 +16,12 @@ jobs:
     
       - image: circleci/postgres:9.6.2-alpine
         environment:
-          POSTGRES_USER: root
+          POSTGRES_USER: deployer
           POSTGRES_DB: circle-test_test
+          PG_HOST: localhost
+          PG_USER: ubuntu
+          RAILS_ENV: test
+          RACK_ENV: test
         
     steps:
       - checkout
@@ -45,10 +49,6 @@ jobs:
       - run:
           name: Waiting for Postgres to be ready
           command: |
-            dockerize -wait tcp://localhost:5432 -timeout 1m
-            pg_isready
-            createuser deployer
-            createdb root
             sudo postgres psql -p 5432 -c "ALTER USER deployer WITH SUPERUSER"
 
             for i in `seq 1 10`;
