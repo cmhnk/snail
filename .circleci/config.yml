@@ -49,8 +49,6 @@ jobs:
       - run:
           name: Waiting for Postgres to be ready
           command: |
-            sudo postgres psql -p 5432 -c "ALTER USER deployer WITH SUPERUSER"
-
             for i in `seq 1 10`;
             do
               nc -z localhost 5432 && echo Success && exit 0
