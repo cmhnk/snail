@@ -1,5 +1,4 @@
-[circle-ci logo]: https://circleci.com/gh/cmhnk/snail..svg?style=shield&circle-token=9350a82ae079a93be5702a0ba699a9611675b625
-
+[![Circle CI](https://circleci.com/gh/cmhnk/snail..svg?style=shield&circle-token=9350a82ae079a93be5702a0ba699a9611675b625)]
 
 # README
 
