@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Waiting for Postgres to be ready
           command: |
-            pg_ctlcluster start
+            dockerize -wait tcp://localhost:5432 -timeout 1m
             pg_isready
             createuser deployer
             createdb root
