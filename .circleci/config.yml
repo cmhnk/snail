@@ -45,8 +45,7 @@ jobs:
       - run:
           name: Waiting for Postgres to be ready
           command: |
-            
-            echo "/usr/local/pgsql/bin/pg_ctl start -l logfile -D /usr/local/pgsql/data" >> /etc/rc.d/rc.local
+            pg_ctlcluster start
             pg_isready
             createuser deployer
             createdb root
