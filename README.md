@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/cmhnk/snail.svg?style=svg)](https://circleci.com/gh/cmhnk/snail)
+[![CircleCI](https://circleci.com/gh/cmhnk/snail.svg?style=shield)](https://circleci.com/gh/cmhnk/snail)
 
 # README
 
