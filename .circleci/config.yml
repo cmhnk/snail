@@ -45,6 +45,7 @@ jobs:
       - run:
           name: Database Setup
           command: |
+            pg_ctl -D /usr/local/var/postgres start
             createuser deployer
             sudo psql -U root
             createdb root
