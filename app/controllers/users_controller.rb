@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     render json: 'hi'
   end
 
-  def index
+  def show
     @users = User.all
     # render json: { message: 'Successfully retrieved users.', payload: @users }
   end
