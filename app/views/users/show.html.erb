@@ -1,3 +1,3 @@
-<%= c("user") do %>
-  </p> Hello users! </p>
+<%= c("page") do %>
+  <%= c("user", users: @users) %>
 <% end %>
