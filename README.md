@@ -2,4 +2,6 @@
 
 # README
 
-This is an application I'm working on to learn more about building APIs with GraphQL.
+This is an application I'm working on to learn more about:
+- fullstack development
+- building APIs with GraphQL

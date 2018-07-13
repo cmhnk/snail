@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  root to: 'users#show'
+
+  get '/login', to: "auth#new"
+  post '/login', to: "auth#create"
+
   resources :users
 
   # if Rails.env.development?
