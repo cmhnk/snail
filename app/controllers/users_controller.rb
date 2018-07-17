@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @users = User.order(created_at: :asc).last(20)
-    # render json: { message: 'Successfully retrieved users.', payload: @users }
+    @users = User.all.limit(10)
+    render json: { message: 'Successfully retrieved users.', payload: @users }
   end
 
   def create
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     render json: { message: 'New User Created!', payload: user }
   end
 
-  def private
+  private
 
   # redirect user to /login if hasn't picked a username yet
   def authenticate!
@@ -23,6 +23,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
+    Rails.logger.info "params: #{params}" 
     params.require(:user).permit(:first_name, :last_name, :birthdate, :address, :email)
   end
 end
