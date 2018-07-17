@@ -2,18 +2,11 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'database_cleaner'
 
-# Seeds
-require File.expand_path('db_seeds_helper.rb', __dir__)
-
-RESEED_DB = lambda do
-  DbSeedsHelper.create_users
-end
-
 RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
-    RESEED_DB.call
+    Rails.application.load_seed # loading seeds
   end
 
   config.around(:each) do |example|

@@ -16,7 +16,8 @@ User.create(
   last_name: 'Pennington',
   email: 'mpennington@gmail.com',
   birthdate: '28-06-1991',
-  address: '2540 College Ave., Berkeley, CA 94704')
+  address: '2540 College Ave., Berkeley, CA 94704',
+  address_book_id: corinne_friends.id)
 
 User.create(
   first_name: 'Jonathan',
