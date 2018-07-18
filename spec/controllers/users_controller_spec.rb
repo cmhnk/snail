@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'users page', :type => :request do
-  it 'displays all users' do
+  xit 'displays all users' do
     get "/users"
 
     expect(response).to have_http_status(:ok)
