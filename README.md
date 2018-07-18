@@ -23,7 +23,7 @@ Minimal set of necessary features include: adding / removing a contact, adding /
 - [ ] implement minimal API endpoints for AddressBook
 - [x] implement basic "login" route & component that uses simple caching for now
 - [ ] add component for displaying all contacts / users in an AddressBook
-- [ ] add component for create user form
+- [ ] add component for create contact / user form
 - [ ] use Balsamiq or another tool to create some wireframes for fun
 - [ ] rename User to Contact?
 - [ ] refactor to use graphql
