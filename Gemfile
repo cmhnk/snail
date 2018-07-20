@@ -9,7 +9,6 @@ gem 'pg'
 gem 'rspec-core', '3.7.1'
 gem 'rspec-rails'
 gem 'webpacker', '~> 3.5'
-gem 'rubocop-rails', '~> 1.4.1'
 gem 'rb-readline'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -38,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rubocop-rails', '~> 1.4.1'
 end
 
 group :development do
