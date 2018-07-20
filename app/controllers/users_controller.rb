@@ -5,8 +5,8 @@ class UsersController < ApplicationController
     render json: 'hi'
   end
 
-  def show
-    @users = User.all.limit(10)
+  def index
+    @users = User.all
     render json: { message: 'Successfully retrieved users.', payload: @users }
   end
 

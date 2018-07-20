@@ -7,10 +7,9 @@ Rails.application.routes.draw do
   get '/reset', to: "session#reset"
 
   resources :users
-
-  # if Rails.env.development?
-  #   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
-  # end
-  # post "/graphql", to: "graphql#execute"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :address_books, only: [:index] do
+    collection do
+      get '/view/:id', to: "address_books#view"
+    end
+  end
 end
