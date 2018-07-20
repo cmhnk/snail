@@ -7,7 +7,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: { message: 'Successfully retrieved users.', payload: @users }
+  end
+
+  def find_by_address_book
+    address_book = AddressBook.where(category: params[:category]).first
+    @users = User.where(address_book: address_book)
+    # serializer here
+    
+    render :index
   end
 
   def create

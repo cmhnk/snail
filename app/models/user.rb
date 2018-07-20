@@ -13,4 +13,8 @@ class User < ApplicationRecord
     next_month = current_month + 1
     where('extract(month from birthdate) IN (?)', [current_month, next_month]).limit(10)
   end
+
+  def format_birthdate
+    [birthdate.strftime("%B"), birthdate.day].join(' ')
+  end
 end
