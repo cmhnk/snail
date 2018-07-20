@@ -27,3 +27,5 @@ Minimal set of necessary features include: adding / removing a contact, adding /
 - [ ] use Balsamiq or another tool to create some wireframes for fun
 - [ ] rename User to Contact?
 - [ ] refactor to use graphql
+- [ ] deploy to Heroku
+- [ ] add metrics to track unique visits / page views?

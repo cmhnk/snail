@@ -5,9 +5,16 @@ class UsersController < ApplicationController
     render json: 'hi'
   end
 
-  def show
-    @users = User.all.limit(10)
-    render json: { message: 'Successfully retrieved users.', payload: @users }
+  def index
+    @users = User.all
+  end
+
+  def find_by_address_book
+    address_book = AddressBook.where(category: params[:category]).first
+    @users = User.where(address_book: address_book)
+    # serializer here
+    
+    render :index
   end
 
   def create
