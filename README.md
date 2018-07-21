@@ -20,12 +20,16 @@ Minimal set of necessary features include: adding / removing a contact, adding /
 
 - [x] add User (i.e., Contact) & AddressBook models
 - [x] implement minimal API endpoints for User (create, index)
-- [ ] implement minimal API endpoints for AddressBook
+- [x] implement minimal API endpoints for AddressBook
 - [x] implement basic "login" route & component that uses simple caching for now
+- [x] add basic erb for displaying all contacts / users in an AddressBook
 - [ ] add component for displaying all contacts / users in an AddressBook
 - [ ] add component for create contact / user form
 - [ ] use Balsamiq or another tool to create some wireframes for fun
 - [ ] rename User to Contact?
 - [ ] refactor to use graphql
-- [ ] deploy to Heroku
+- [x] deploy to Heroku
 - [ ] add metrics to track unique visits / page views?
+- [ ] add forms for creating new address books & users
+- [ ] add Devise for authentication
+- [ ] add protect_from_forgery where needed
