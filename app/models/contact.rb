@@ -1,5 +1,5 @@
-# Defines Users in the system
-class User < ApplicationRecord
+# Defines Contacts in the system
+class Contact < ApplicationRecord
   belongs_to :address_book
 
   validates :first_name, presence: true
