@@ -1,6 +1,6 @@
 <h> click on an address book! </h>
 <% @address_books.each do |address_book| %>
 <div>
-  <%= link_to address_book.category, "/users/find/#{address_book.category}" %>
+  <%= link_to address_book.category, "/contacts/find/#{address_book.category}" %>
 </div>
 <% end %>

@@ -6,9 +6,9 @@ Rails.application.routes.draw do
 
   get '/reset', to: "session#reset"
 
-  resources :users do
+  resources :contacts do
     collection do
-      get '/find/:category', to: "users#find_by_address_book"
+      get '/find/:category', to: "contacts#find_by_address_book"
     end
   end
 

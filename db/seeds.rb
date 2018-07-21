@@ -2,7 +2,7 @@
 corinne_family = AddressBook.create(owner: 'Corinne Henk', category: 'Family')
 corinne_friends = AddressBook.create(owner: 'Corinne Henk', category: 'Friends')
 
-User.create(
+Contact.create(
   first_name: 'Moira',
   last_name: 'Fagan',
   email: 'moira.fagan@gmail.com',
@@ -11,7 +11,7 @@ User.create(
   address_book_id: corinne_friends.id
 )
 
-User.create(
+Contact.create(
   first_name: 'Mae',
   last_name: 'Pennington',
   email: 'mpennington@gmail.com',
@@ -19,7 +19,7 @@ User.create(
   address: '2540 College Ave., Berkeley, CA 94704',
   address_book_id: corinne_friends.id)
 
-User.create(
+Contact.create(
   first_name: 'Jonathan',
   last_name: 'Henk',
   email: 'jonathanhenk@gmail.com',
@@ -28,7 +28,7 @@ User.create(
   address_book_id: corinne_family.id
 )
 
-User.create(
+Contact.create(
   first_name: 'Maryann',
   last_name: 'Fitzsimmons',
   email: 'mafitz65@gmail.com',
@@ -37,7 +37,7 @@ User.create(
   address_book_id: corinne_family.id
 )
 
-User.create(
+Contact.create(
   first_name: 'John',
   last_name: 'Henk',
   email: 'henkj@sbcglobal.net',
@@ -46,14 +46,14 @@ User.create(
   address_book_id: corinne_family.id
 )
 
-User.create(
+Contact.create(
   first_name: 'Annie',
   last_name: 'Steel',
   birthdate: '10-08-1991',
   address_book_id: corinne_friends.id
 )
 
-User.create(
+Contact.create(
   first_name: 'Andrea',
   last_name: 'C-S',
   birthdate: '02-08-2010',
