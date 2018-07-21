@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'users#show'
+  devise_for :users
+  root to: 'address_books#index'
 
-  get '/login', to: "auth#new"
-  post '/login', to: "auth#create"
+  # get '/login', to: "auth#new"
+  # post '/login', to: "auth#create"
 
   get '/reset', to: "session#reset"
 

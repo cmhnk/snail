@@ -1,3 +1,3 @@
-import "components/users/users";
-import "components/user-form/user-form";
+import "components/contacts/contacts";
+import "components/contact-form/contact-form";
 import "./address-book.css";

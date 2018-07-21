@@ -1,8 +1,10 @@
 class AddressBooksController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  before_action :authenticate_user!
 
   def index
-    @address_books = AddressBook.all
+    @address_books = AddressBook.belonging_to_user(current_user)
+    render json: {message: 'Get Started!'} if @address_books.empty?
+    # render json: @address_books
   end
 
   def create

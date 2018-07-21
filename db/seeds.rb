@@ -1,6 +1,6 @@
-
-corinne_family = AddressBook.create(owner: 'Corinne Henk', category: 'Family')
-corinne_friends = AddressBook.create(owner: 'Corinne Henk', category: 'Friends')
+default_user = User.create(email: 'foo@bar.com', password: 'Admin!2345', first_name: 'Foo', last_name: 'Bar')
+corinne_family = AddressBook.create(user_id: default_user.id, category: 'Family')
+corinne_friends = AddressBook.create(user_id: default_user.id, category: 'Friends')
 
 Contact.create(
   first_name: 'Moira',
