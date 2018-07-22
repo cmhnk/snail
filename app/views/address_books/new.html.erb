@@ -1,0 +1,5 @@
+<h> create an Address Book! </h>
+<%= form_for @address_book, url: {action: "create"} do |f| %>
+  <%= f.text_field :category %>
+  <%= f.submit "Create" %>
+<% end %>

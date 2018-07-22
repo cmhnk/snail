@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :address_books, only: [:index, :create] do
+  resources :address_books do
     collection do
       get '/view/:id', to: "address_books#view"
     end
