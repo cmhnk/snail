@@ -1,11 +1,3 @@
-<h> click on an address book! </h>
-<% @address_books.each do |address_book| %>
-<div>
-  <%= link_to address_book.category, "/contacts/find/#{address_book.category}" %>
-</div>
+<%= c("page") do %>
+  <%= c("address-books") %>
 <% end %>
-<br>
-<br>
-<div>
-  <%= link_to "new address book", action: "new" %>
-</div>

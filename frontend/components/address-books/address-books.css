@@ -1,14 +1,18 @@
-.address-book {
+.address-books {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  justify-content: center;
+  padding-left: 30px;
+  width: 20%;
   height: 100%;
   overflow: hidden;
+  background-color: lightblue;
 
-  &--messages {
+  &--categories {
     width: 100%;
     flex: 1 0 0;
+    color: red;
   }
 
   &--form {
