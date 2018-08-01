@@ -6,6 +6,7 @@ class AddressBooksController < ApplicationController
   end
 
   def new
+    @address_books = AddressBook.belonging_to_user(current_user)
     @address_book = AddressBook.new
   end
 

@@ -1,0 +1,12 @@
+<div class="address-books">
+<div class="address-book-form">
+<% return unless @address_book %>
+<h> create an Address Book! </h>
+<%= form_for @address_book, url: {action: "create"} do |f| %>
+  <%= f.text_field :category %>
+  <%= f.submit "Create"%>
+<% end %>
+<br>
+<%= link_to "never mind", action: "index" %>
+</div>
+</div>
