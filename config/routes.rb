@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'users#show'
+  root to: 'contacts#show'
 
   get '/login', to: "auth#new"
   post '/login', to: "auth#create"

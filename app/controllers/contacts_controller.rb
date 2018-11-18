@@ -6,14 +6,12 @@ class ContactsController < ApplicationController
   end
 
   def index
-    @users = Contact.all
+    @contacts = Contact.all
   end
 
   def find_by_address_book
     address_book = AddressBook.where(category: params[:category]).first
     @contacts = Contact.where(address_book: address_book)
-    # serializer here
-    
     render :index
   end
 
